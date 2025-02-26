@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Menghubungkan ke css eksternal-->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="{{asset('company/css/style.css') }}" />
 
     <!-- Bootstrap core CSS -->
     <link
@@ -24,9 +24,9 @@
     />
 
     <!---logo title--->
-    <link rel="icon" href="image/Logo-DreamHome.png" type="image/x-icon" />
+    <link rel="icon" href="{{ asset ('company/image/Logo-DreamHome.png')}}" type="image/x-icon" />
 
-    <title>Bootstrap demo</title>
+    <title>Desain</title>
   </head>
   <body class="body">
     <!---navbar--->
@@ -36,7 +36,7 @@
       <div class="container">
         <a class="navbar-brand" href="#"
           ><img
-            src="image/Logo-DreamHome.png"
+            src="{{ asset ('company/image/Logo-DreamHome.png')}}"
             alt="Logo"
             width="30"
             class="d-inline-block align-text-top me-3"
@@ -73,8 +73,8 @@
           </ul>
 
           <div>
-            <button class="button-primary">Daftar</button>
-            <button class="button-secondary">Masuk</button>
+            <button class="button-primary"><a  href="{{ url('/registrasi') }}" style="text-decoration: none; color: #fff;">Daftar</a></button>
+            <button class="button-secondary"><a  href="{{ url('/login') }}" style="text-decoration: none; color: #000;">Masuk</a></button>
           </div>
         </div>
       </div>
@@ -99,12 +99,12 @@
           </div>
         </div>
         <img
-          src="image/image 9.png"
+          src="{{ asset ('company/image/image 9.png')}}"
           alt=""
           class="position-absolute end-0 bottom-0 image-hero"
         />
         <img
-          src="image/accsent.png"
+          src="{{ asset ('company/image/accsent.png') }}"
           alt=""
           class="accsent-img h-100 position-absolute top-0 start-0"
         />
@@ -129,7 +129,7 @@
             <div class="card-layanan">
               <div class="circle-icon position-relative mx-auto">
                 <img
-                  src="image/house 1.png"
+                  src="{{ asset ('company/image/house 1.png') }}"
                   alt=""
                   class="position-absolute top-50 start-50 translate-middle"
                 />
@@ -147,7 +147,7 @@
             <div class="card-layanan">
               <div class="circle-icon position-relative mx-auto mt-2">
                 <img
-                  src="image/sewa.png"
+                  src="{{ asset ('company/image/sewa.png') }}"
                   alt=""
                   class="position-absolute top-50 start-50 translate-middle"
                 />
@@ -165,7 +165,7 @@
             <div class="card-layanan">
               <div class="circle-icon position-relative mx-auto mt-2">
                 <img
-                  src="image/town 1.png"
+                  src="{{ asset ('company/image/town 1.png') }}"
                   alt=""
                   class="position-absolute top-50 start-50 translate-middle"
                 />
@@ -425,275 +425,180 @@
     <!---Rekomendasi  SECTION--->
     <section id="rekomendasi">
       <div class="container">
-          <div class="row mb-5">
-              <div class="col-12 text-center">
-                  <h2 class="judul">Rekomendasi Rumah Untukmu</h2>
-              </div>
+        <div class="row mb-5">
+          <div class="col-12 text-center mt-5">
+            <h2 class="judul">Rekomendasi Rumah Untuk Mu</h2>
           </div>
-
-          <div class="row">
-              <div class="col-4 mb-4">
-                  <div class="card"  style="width: 22rem;">
-                      <img src="image/home 1.png" class="p-2" alt="">
-                      <div class="card-body">
-                          <h4 class="mb-3">IDR. 250.000.000</h4>
-                          <p class="mb-3">Jl. Mangkubumi No. 10</p>
-                          <span class="text">Jual</span>
-                      </div>
-                      <div class="card-icon d-flex justify-content-between px-4">
-                          <span>
-                              <img src="image/bad-icon.png" alt=""> 3
-                              <p>Kamar Tidur</p>
-                          </span>
-
-                          <span>
-                              <img src="image/bathroom.png" alt=""> 2
-                              <p>Kamar Mandi</p>
-                          </span>
-
-                          <span>
-                              <img src="image/luas.png" alt=""> 450M
-                              <p>Luas Rumah</p>
-                          </span>
-
-                          
-
-                      </div>
-                  </div>
+        </div>
+        <div class="row">
+          <div class="col-4 mb-4">
+            <div class="card p-2" style="width: 22rem">
+              <img src="{{ asset ('company/image/home 1.png') }}" alt="" />
+              <div class="card-body">
+                <h4>IDR.250.000.000</h4>
+                <p class="mb-4 lh-sm">
+                  Jl. Mangkubumi No. 11 <br /><span class="text-danger"
+                    >Jual</span
+                  >
+                </p>
               </div>
 
-              <div class="col-4 mb-4">
-                  <div class="card" style="width: 22rem;">
-                      <img src="image/rekomendsi 2.png" class="p-2" alt="">
-                      <div class="card-body">
-                          <h4 class="mb-3">IDR. 450.000.000</h4>
-                          <p class="mb-3">Jl. Mangkubumi No. 11</p>
-                          <span class="text">Jual</span>
-                      </div>
-                      <div class="card-icon d-flex justify-content-between px-4">
-                          <span>
-                              <img src="image/bad-icon.png" alt=""> 5
-                              <p>Kamar Tidur</p>
-                          </span>
-
-                          <span>
-                              <img src="image/bathroom.png" alt=""> 3
-                              <p>Kamar Mandi</p>
-                          </span>
-
-                          <span>
-                              <img src="image/luas.png" alt=""> 575M
-                              <p>Luas Rumah</p>
-                          </span>
-
-                      </div>
-                  </div>
+              <div class="card-fasilitas d-flex justify-content-between px-4">
+                <span>
+                  <img src="{{ asset ('company/image/bad-icon.png') }}" alt="" /> 3
+                  <p>Kamar Tidur</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/image/bathroom.png') }}" alt="" /> 3
+                  <p>Kamar Mandi</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/image/luas.png') }}" alt="" /> 3
+                  <p>luas Tanah</p>
+                </span>
               </div>
-
-              <div class="col-4 mb-4">
-                  <div class="card" style="width: 22rem;">
-                      <img src="image/rekomendsi 3.png" class="p-2" alt="">
-                      <div class="card-body">
-                          <h4 class="mb-3">IDR. 600.000.000</h4>
-                          <p class="mb-3">Jl. Mangkubumi No. 12</p>
-                          <span class="text">Jual</span>
-                      </div>
-                      <div class="card-icon d-flex justify-content-between px-4">
-                          <span>
-                              <img src="image/bad-icon.png" alt=""> 6
-                              <p>Kamar Tidur</p>
-                          </span>
-
-                          <span>
-                              <img src="image/bathroom.png" alt=""> 4
-                              <p>Kamar Mandi</p>
-                          </span>
-
-                          <span>
-                              <img src="image/luas.png" alt=""> 650M
-                              <p>Luas Rumah</p>
-                          </span>
-
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-4 mb-4">
-                  <div class="card" style="width: 22rem;">
-                      <img src="image/rekomendsi 4.png" class="p-2" alt="">
-                      <div class="card-body">
-                          <h4 class="mb-3">IDR. 499.000.000</h4>
-                          <p class="mb-3">Jl. Mangkubumi No. 13</p>
-                          <span class="text">Jual</span>
-                      </div>
-                      <div class="card-icon d-flex justify-content-between px-4">
-                          <span>
-                              <img src="image/bad-icon.png" alt=""> 4
-                              <p>Kamar Tidur</p>
-                          </span>
-
-                          <span>
-                              <img src="image/bathroom.png" alt=""> 5
-                              <p>Kamar Mandi</p>
-                          </span>
-
-                          <span>
-                              <img src="image/luas.png" alt=""> 610M
-                              <p>Luas Rumah</p>
-                          </span>
-
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-4 mb-4">
-                  <div class="card" style="width: 22rem;">
-                      <img src="image/rekomendsi 5.png" class="p-2" alt="">
-                      <div class="card-body">
-                          <h4 class="mb-3">IDR. 460.000.000</h4>
-                          <p class="mb-3">Jl. Mangkubumi No. 14</p>
-                          <span class="text">Jual</span>
-                      </div>
-                      <div class="card-icon d-flex justify-content-between px-4">
-                          <span>
-                              <img src="image/bad-icon.png" alt=""> 4
-                              <p>Kamar Tidur</p>
-                          </span>
-
-                          <span>
-                              <img src="image/bathroom.png" alt=""> 2
-                              <p>Kamar Mandi</p>
-                          </span>
-
-                          <span>
-                              <img src="image/luas.png" alt=""> 570M
-                              <p>Luas Rumah</p>
-                          </span>
-
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-4 mb-4">
-                  <div class="card" style="width: 22rem;">
-                      <img src="image/rekomendsi 6.png" class="p-2" alt="">
-                      <div class="card-body">
-                          <h4 class="mb-3">IDR. 449.000.000</h4>
-                          <p class="mb-3">Jl. Mangkubumi No. 15</p>
-                          <span class="text">Jual</span>
-                      </div>
-                      <div class="card-icon d-flex justify-content-between px-4">
-                          <span>
-                              <img src="image/bad-icon.png" alt=""> 4
-                              <p>Kamar Tidur</p>
-                          </span>
-
-                          <span>
-                              <img src="image/bathroom.png" alt=""> 2
-                              <p>Kamar Mandi</p>
-                          </span>
-
-                          <span>
-                              <img src="image/luas.png" alt=""> 525M
-                              <p>Luas Rumah</p>
-                          </span>
-
-                      </div>
-                  </div>
-              </div>
+            </div>
           </div>
-
-
-          <!-- Fitur Section -->
-           <section id="fitur" class="overflow-hidden">
-              <div class="container3 position-relative">
-                  <div class="row">
-                      <div class="col-9">
-                         <h3>Fitur Rumah</h2>
-                      </div>
-                      <div class="col-3">
-                          <button class="button-fitur">Lihat Semua
-                              <img src="arrow.png" alt="" class="ms-2">
-                          </button>
-                      </div>
-                  </div>
-                  
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-12 d-flex justify-content-start">
-                              <div class="card-fitur me-4 position-relative">
-                                  <img src="image/image-fitur.jpg" alt="">
-
-                                      <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                                          <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                                              <h5>Kamar Tidur</h5>
-                                              <span>Rumah minimalist type-A3</span>
-                                              <h6>IDR. 250jt</h6>
-                                              <button>Lihat Rumah</button>
-                                      </div>
-                                 </div>
-                              </div>
-
-                              <div class="card-fitur me-4 position-relative">
-                                  <img src="image/image-fitur 1.jpg" alt="">
-
-                                      <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                                          <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                                              <h5>Kamar Tidur</h5>
-                                              <span>Rumah minimalist type-A4</span>
-                                              <h6>IDR. 450jt</h6>
-                                              <button>Lihat Rumah</button>
-                                      </div>
-                                 </div>
-                              </div>
-
-                              <div class="card-fitur me-4 position-relative">
-                                  <img src="image/image-fitur 2.jpg" alt="">
-
-                                      <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                                          <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                                              <h5>Kamar Tidur</h5>
-                                              <span>Rumah minimalist type-A5</span>
-                                              <h6>IDR. 600jt</h6>
-                                              <button>Lihat Rumah</button>
-                                      </div>
-                                 </div>
-                              </div>
-
-                              <div class="card-fitur me-4 position-relative">
-                                  <img src="image/image-fitur 3.jpg" alt="">
-
-                                      <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                                          <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                                              <h5>Kamar Tidur</h5>
-                                              <span>Rumah minimalist type-A6</span>
-                                              <h6>IDR. 499jt</h6>
-                                              <button>Lihat Rumah</button>
-                                      </div>
-                                 </div>
-                              </div>
-
-                          </div>
-                      </div>
-                  </div>
-
-                  <button class="b-a-left position-absolute start-0 top-50 translate-middle-y">
-                      <img src="arrow left.png" alt="">
-                   </button>
-  
-                   <button class="b-a-right position-absolute end-0 top-50 translate-middle-y">
-                      <img src="arrow.png" alt="">
-                   </button>
-
+          <div class="col-4 mb-4">
+            <div class="card p-2" style="width: 22rem">
+              <img src="{{ asset ('company/image/rekomendsi 2.png') }}" alt="" />
+              <div class="card-body">
+                <h4>IDR.250.000.000</h4>
+                <p class="mb-4">
+                  Jl. Mangkubumi No. 11 <br /><span class="text-danger"
+                    >Jual</span
+                  >
+                </p>
               </div>
-           </section>
-
-
+              <div class="card-fasilitas d-flex justify-content-between px-4">
+                <span>
+                  <img src="{{ asset ('company/image/bad-icon.png') }}" alt="" /> 3
+                  <p>Kamar Tidur</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/image/bathroom.png') }}" alt="" /> 3
+                  <p>Kamar Mandi</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/image/luas.png') }}" alt="" /> 3
+                  <p>luas Tanah</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mb-4">
+            <div class="card p-2" style="width: 22rem">
+              <img src="{{ asset ('company/image/rekomendsi 3.png') }}" alt="" />
+              <div class="card-body">
+                <h4>IDR.250.000.000</h4>
+                <p class="mb-4">
+                  Jl. Mangkubumi No. 11 <br /><span class="text-danger"
+                    >Jual</span
+                  >
+                </p>
+              </div>
+              <div class="card-fasilitas d-flex justify-content-between px-4">
+                <span>
+                  <img src="{{ asset ('company/image/bad-icon.png') }}" alt="" /> 3
+                  <p>Kamar Tidur</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/image/bathroom.png') }}" alt="" /> 3
+                  <p>Kamar Mandi</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/image/luas.png') }}" alt="" /> 3
+                  <p>luas Tanah</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card p-2" style="width: 22rem">
+              <img src="{{ asset ('company/') }}image/rekomendsi 4.png" alt="" />
+              <div class="card-body">
+                <h4>IDR.250.000.000</h4>
+                <p class="mb-4">
+                  Jl. Mangkubumi No. 11 <br /><span class="text-danger"
+                    >Jual</span
+                  >
+                </p>
+              </div>
+              <div class="card-fasilitas d-flex justify-content-between px-4">
+                <span>
+                  <img src="{{ asset ('company/') }}image/bad-icon.png" alt="" /> 3
+                  <p>Kamar Tidur</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/') }}image/bathroom.png" alt="" /> 3
+                  <p>Kamar Mandi</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/') }}image/luas.png" alt="" /> 3
+                  <p>luas Tanah</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card p-2" style="width: 22rem">
+              <img src="image/rekomendsi 5.png" alt="" />
+              <div class="card-body">
+                <h4>IDR.250.000.000</h4>
+                <p class="mb-4">
+                  Jl. Mangkubumi No. 11 <br /><span class="text-danger"
+                    >Jual</span
+                  >
+                </p>
+              </div>
+              <div class="card-fasilitas d-flex justify-content-between px-4">
+                <span>
+                  <img src="{{ asset ('company/') }}image/bad-icon.png" alt="" /> 3
+                  <p>Kamar Tidur</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/') }}image/bathroom.png" alt="" /> 3
+                  <p>Kamar Mandi</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/') }}image/luas.png" alt="" /> 3
+                  <p>luas Tanah</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card p-2" style="width: 22rem">
+              <img src="image/rekomendsi 6.png" alt="" />
+              <div class="card-body">
+                <h4>IDR.250.000.000</h4>
+                <p class="mb-4">
+                  Jl. Mangkubumi No. 11 <br /><span class="text-danger"
+                    >Jual</span
+                  >
+                </p>
+              </div>
+              <div class="card-fasilitas d-flex justify-content-between px-4">
+                <span>
+                  <img src="{{ asset ('company/') }}image/bad-icon.png" alt="" /> 3
+                  <p>Kamar Tidur</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/') }}image/bathroom.png" alt="" /> 3
+                  <p>Kamar Mandi</p>
+                </span>
+                <span>
+                  <img src="{{ asset ('company/') }}image/luas.png" alt="" /> 3
+                  <p>luas Tanah</p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-   </section>
-    
+    </section>
 
-    <!--footer class="text-center text-white mt-5" style="background-color: #048853;">
+    <footer class="text-center text-white mt-5" style="background-color: #048853;">
       <!-- Grid container -->
       <div class="container p-4">
         <!-- Section: Images -->
@@ -815,7 +720,6 @@
       <!-- Copyright -->
     </footer>
 
-    <!--Script Js Boostrap--->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
